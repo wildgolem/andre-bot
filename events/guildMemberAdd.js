@@ -5,9 +5,9 @@ module.exports = {
 	name: Events.GuildMemberAdd,
 	execute(member) {
         const embed = new EmbedBuilder()
-                .setColor('#ff9500')
-                .setTitle('Welcome to the server!')
-                .setDescription(`${member.user.username} has joined BLACKSMITH!`);
+                .setColor(0x6AA84F)
+                .setTitle('Welcome to BLACKSMITH!')
+                .setDescription(`${member.user.username} has joined us.`);
                 
         member.roles.add(process.env.test);
         member.guild.channels.cache.get(process.env.general).send({ embeds: [embed] });

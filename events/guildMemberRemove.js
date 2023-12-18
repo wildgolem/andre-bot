@@ -5,7 +5,7 @@ module.exports = {
 	name: Events.GuildMemberRemove,
 	execute(member) {
         const embed = new EmbedBuilder()
-                .setColor('#ff9500')
+                .setColor(0xCC0000)
                 .setTitle('An ally has been slain.')
                 .setDescription(`${member.user.username} has left us.`);
                 
