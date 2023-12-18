@@ -2,14 +2,13 @@ require('dotenv').config();
 const { Events, EmbedBuilder } = require('discord.js');
 
 module.exports = {
-	name: Events.GuildMemberAdd,
+	name: Events.GuildMemberRemove,
 	execute(member) {
         const embed = new EmbedBuilder()
                 .setColor('#ff9500')
-                .setTitle('Welcome to the server!')
-                .setDescription(`${member.user.username} has joined BLACKSMITH!`);
+                .setTitle('An ally has been slain.')
+                .setDescription(`${member.user.username} has left us.`);
                 
-        member.roles.add(process.env.test);
         member.guild.channels.cache.get(process.env.general).send({ embeds: [embed] });
 	},
 };
