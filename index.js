@@ -5,7 +5,7 @@ const { command } = require('./handlers/command');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
 
 client.commands = new Collection();
 
