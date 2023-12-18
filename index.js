@@ -9,7 +9,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.commands = new Collection();
 
-client.login(process.env.token).then(() => {
-    event(client);
-    command(client);    
-});
+event(client);
+command(client);
+
+client.login(process.env.token);
