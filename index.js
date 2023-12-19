@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
 const { event } = require('./handlers/event');
 const { command } = require('./handlers/command');
-const { gogoanime } = require('./feeds/gogoanime');
+const { gogoanime } = require('./gogoanime/feed');
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
 
