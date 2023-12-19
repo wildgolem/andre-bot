@@ -11,11 +11,11 @@ def get_latest_by_type(type=1):
         'dnt': '1',
         'sec-ch-ua-mobile': '?0',
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36',
-        'origin': 'https://gogoanime.vc',
+        'origin': 'https://anitaku.to/',
         'sec-fetch-site': 'cross-site',
         'sec-fetch-mode': 'cors',
         'sec-fetch-dest': 'empty',
-        'referer': 'https://gogoanime.vc/',
+        'referer': 'https://anitaku.to/',
     }
 
     params = (
@@ -32,7 +32,7 @@ def get_latest_by_type(type=1):
 
 
 def generate_rss_by_type(type=1):
-    types = ['(Sub)', '(Dub)', '(Chinese)']
+    types = '(Sub)' #['(Sub)', '(Dub)', '(Chinese)']
     rss = f"""
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
@@ -48,7 +48,7 @@ def generate_rss_by_type(type=1):
     <link>{}</link>
     <description>{}</description>
 </item>
-""".format(f"{item[2]} - Episode {item[1]}", "https://gogoanime.vc" + item[0], f"Episode {item[1]} of {item[2]} is out!")
+""".format(f"{item[2]} - Episode {item[1]}", "https://anitaku.to/" + item[0], f"Episode {item[1]} of {item[2]} is out!")
 
     rss += '\n</channel>\n</rss>'
     return rss
