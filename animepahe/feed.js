@@ -16,9 +16,9 @@ function gogoanime() {
         const embed = new EmbedBuilder()
             .setColor(0xFF00FF)
             .setTitle(`${item.title}`)
-            .setURL(`${item.link}`)
-            .setThumbnail(`${item.img}`);
-        webhook.send({ embeds: [embed] });
+            .setURL(`${item.link}`);
+        console.log(item);
+        //webhook.send({ embeds: [embed] });
     });
 
     feeder.on('error', console.error);

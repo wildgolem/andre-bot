@@ -34,9 +34,9 @@ def generate_rss():
     <title>{}</title>
     <link>{}</link>
     <description>{}</description>
-    <img src='{}'/>
+    <image>{}</image>
 </item>
-""".format(f"{item[2]} - Episode {item[1]}", "https://animepahe.com/play/" + item[0], f"Episode {item[1]} of {item[2]} is out!", item[3])
+""".format(f"{item[2]} - Episode {item[1]}", "https://animepahe.com/play/" + item[0], f"Episode {item[1]} of {item[2]} is out!", f"{item[3]}")
 
     rss += '\n</channel>\n</rss>'
     return rss
