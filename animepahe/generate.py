@@ -14,7 +14,8 @@ def get_latest():
             '{}/{}'.format(x['anime_session'], x['session']),
             x['episode'],
             x['anime_title'],
-            x['snapshot']
+            x['snapshot'],
+            x['disc'],
         ] for x in response['data']
     ]
 
@@ -29,7 +30,8 @@ def generate_rss():
 """
 
     for item in get_latest():
-        rss += """
+        if item[4] != 'BD':
+            rss += """
 <item>
     <title>{}</title>
     <link>{}</link>

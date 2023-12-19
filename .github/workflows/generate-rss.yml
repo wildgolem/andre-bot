@@ -1,4 +1,4 @@
-name: Generate Gogoanime RSS Feeds
+name: Generate Animepahe RSS Feeds
 
 on:
   push:
