@@ -13,7 +13,8 @@ def get_latest():
         [
             '{}/{}'.format(x['anime_session'], x['session']),
             x['episode'],
-            x['anime_title']
+            x['anime_title'],
+            x['snapshot']
         ] for x in response['data']
     ]
 
@@ -25,8 +26,6 @@ def generate_rss():
 
 <channel>
 <title>AnimePahe - RSS Feed</title>
-<link>https://github.com/ArjixGamer/anime-rss</link>
-<description>A simple RSS feed for animepahe!</description>
 """
 
     for item in get_latest():
@@ -35,8 +34,9 @@ def generate_rss():
     <title>{}</title>
     <link>{}</link>
     <description>{}</description>
+    <img src={}/>
 </item>
-""".format(f"{item[2]} - Episode {item[1]}", "https://animepahe.com/play/" + item[0], f"Episode {item[1]} of {item[2]} is out!")
+""".format(f"{item[2]} - Episode {item[1]}", "https://animepahe.com/play/" + item[0], f"Episode {item[1]} of {item[2]} is out!", {item[3]})
 
     rss += '\n</channel>\n</rss>'
     return rss
