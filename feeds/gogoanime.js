@@ -8,7 +8,7 @@ function gogoanime() {
     const feeder = new RssFeedEmitter();
 
     feeder.add({
-        url: 'https://raw.githubusercontent.com/ArjixWasTaken/anime-rss/main/gogoanime/gogoanime-rss-sub.xml',
+        url: 'https://raw.githubusercontent.com/wildgolem/andre-bot/main/gogoanime/gogoanime-rss-sub.xml',
         refresh: 60000,
     });
 
