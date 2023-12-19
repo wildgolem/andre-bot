@@ -56,8 +56,8 @@ def generate_rss_by_type(type=1):
 
 types = {
     'sub': 1,
-    'dub': 2,
-    'chinese': 3
+    #'dub': 2,
+    #'chinese': 3
 }
 
 
