@@ -9,7 +9,7 @@ function gogoanime() {
 
     feeder.add({
         url: 'https://raw.githubusercontent.com/wildgolem/andre-bot/main/gogoanime/gogoanime-rss-sub.xml',
-        refresh: 900000,
+        refresh: 300000,
     });
 
     feeder.on('new-item', function(item) {
