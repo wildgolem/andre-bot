@@ -48,7 +48,7 @@ def generate_rss_by_type(type=1):
     <link>{}</link>
     <description>{}</description>
 </item>
-""".format(f"{item[2]} - Episode {item[1]}", "https://anitaku.to/" + item[0], f"Episode {item[1]} of {item[2]} is out!")
+""".format(f"{item[2]} - Episode {item[1]}", "https://anitaku.to" + item[0], f"Episode {item[1]} of {item[2]} is out!")
 
     rss += '\n</channel>\n</rss>'
     return rss
