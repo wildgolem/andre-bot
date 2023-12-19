@@ -34,7 +34,7 @@ jobs:
       with:
         # Optional but recommended
         # Defaults to "Apply automatic changes"
-        commit_message: Apply automatic changes
+        commit_message: automatic gogoanime-rss
 
         file_pattern: ./*.xml
 
